@@ -1,4 +1,120 @@
- h1{
-    color: red;
-    font-family:Arial, Helvetica, sans-serif;
- }
+/* Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: #e0f7fa; /* Light aqua blue background */
+   color: #37474f; /* Dark slate gray text */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   overflow-x: hidden;
+}
+
+/* Top Bar Styling */
+#topbar {
+   width: 100%;
+   background-color: #004d40; /* Dark teal */
+   padding: 10px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+
+#topbar nav ul {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+
+#topbar nav ul li a {
+   color: #b2dfdb; /* Soft teal text */
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1.1em;
+   transition: color 0.3s ease;
+}
+
+#topbar nav ul li a:hover {
+   color: #80cbc4; /* Slightly brighter teal */
+}
+
+/* Main Section Styling */
+.main-section {
+   margin-top: 80px;
+   padding: 40px;
+   text-align: center;
+}
+
+.main-content h1 {
+   font-size: 3em;
+   margin-bottom: 20px;
+   color: #004d40; /* Dark teal */
+   animation: fadeIn 2s ease;
+}
+
+.content h2 {
+   font-size: 2em;
+   margin-bottom: 10px;
+   color: #00796b; /* Calming teal shade */
+   animation: slideIn 2s ease forwards;
+   transform: translateX(-100%);
+}
+
+blockquote {
+   font-size: 1.2em;
+   color: #607d8b; /* Soft blue-gray */
+   font-style: italic;
+}
+
+/* Image Styling */
+#image-container {
+   margin-top: 20px;
+}
+
+.profile-pic {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   transition: transform 0.3s ease;
+   border: 3px solid #00796b; /* Calming teal */
+}
+
+.profile-pic:hover {
+   transform: scale(1.05); /* Slightly smaller scale for a subtle effect */
+}
+
+/* Footer Styling */
+footer {
+   margin-top: 30px;
+   padding: 10px;
+   font-size: 0.9em;
+   color: #546e7a; /* Gray-blue for footer text */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
+}
+
+@keyframes slideIn {
+   from {
+       transform: translateX(-100%);
+   }
+   to {
+       transform: translateX(0);
+   }
+}
